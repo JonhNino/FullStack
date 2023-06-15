@@ -40,7 +40,7 @@ const ShowProducts = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {products.map((product) => (
+                    { products.map((product) => (
                         <tr key={product.id}>
                             <td>{product.name_product}</td>
                             <td>{product.price_product}</td>
@@ -49,7 +49,7 @@ const ShowProducts = () => {
                             <td>{product.description_product}</td>
                             <td>{product.color_product}</td>
                             <td>
-                                <link to={`/edit/${product-it}`} className='btn btn-warning'>edit</link>
+                                <Link to={`/edit/${product.id}`} className='btn btn-warning'>edit</Link>
                                 <button onClick={( )=>deleteProduct(product.id)} className='btn btn-danger'>Delete</button>
                             </td>
                         </tr>
